@@ -1,0 +1,12 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.diagnostics.globals": [
+        "VP_GetSides",
+        "VP_GetScenario",
+        "ScenEdit_AddSide",
+        "ScenEdit_AddUnit",
+        "ScenEdit_UpdateUnit",
+        "ScenEdit_SetUnit",
+        "VP_GetSide"
+    ]
+}
