@@ -1,4 +1,4 @@
-Here you can find Lua script to include Finnish coastal forts to your scenarios.
+Here you can find Lua scripts to include Finnish coastal forts to your scenarios.
 
 Scripts starting with `simple-` uses a much simpler way of adding these forts to
 Command: Modern Operations (CMO) scenarios. Each fort is added as a one facility
