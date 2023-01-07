@@ -14,7 +14,7 @@
 --     - https://en.wikipedia.org/wiki/%C3%85land_convention
 --     - https://www.finlex.fi/fi/sopimukset/sopsteksti/1922/19220001
 --
--- Author: Mikko Haapanen <haapanen.mo@gmail.com>
+-- Author: humi / haapmik
 --
 -- SPDX-License-Identifier: MIT
 

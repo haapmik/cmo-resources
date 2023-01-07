@@ -10,7 +10,7 @@
 -- each island. This script uses a bit simpler method and
 -- places each battery as a single facility.
 --
--- Author: Mikko Haapanen <haapanen.mo@gmail.com>
+-- Author: humi / haapmik
 --
 -- SPDX-License-Identifier: MIT
 
