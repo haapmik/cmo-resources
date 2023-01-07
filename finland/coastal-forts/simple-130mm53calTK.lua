@@ -64,7 +64,7 @@ function addFort_130mm53calTK(loc, name, size, type, group)
 		type = "Facility",
 		side = side,
 		dbId = facilityId["fort_130mm53calTK_x" .. tostring(size) .. "_" .. type],
-		name = name,
+		name = name .. " (130mm/53 TK Turret x " .. size .. ")",
 		latitude = loc.latitude,
 		longitude = loc.longitude,
 	})
