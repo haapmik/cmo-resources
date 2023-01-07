@@ -241,7 +241,7 @@ end
 function coastalFort_oro()
 	local fortName = "Örö " .. fortSuffix
 
-	-- Aerial photos shows three possible 130mm/53 TK guns
+	-- Aerial photos and tourist photos shows three 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 59.806830586, longitude = 22.333661402 }, fortName, 3, "ranta")
 
 	-- Aerial photos also shows four old 152mm/50 T guns at southwest of Örö,
