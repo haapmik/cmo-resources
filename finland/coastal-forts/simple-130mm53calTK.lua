@@ -85,14 +85,48 @@ end
 
 function coastalFort_gylto()
 	local fortName = "Gyltö " .. fortSuffix
+
+	-- Aerial photos shows three 130/53 TK guns.
+	local fort = addFort_130mm53calTK({ latitude = 60.109177371, longitude = 21.469090613 }, fortName, 3, "ranta")
 end
 
 function coastalFort_isosaari()
 	local fortName = "Isosaari " .. fortSuffix
+
+	-- Aerial photos shows four 130/53 TK guns.
+	local fort = addFort_130mm53calTK({ latitude = 60.101053506, longitude = 25.054301100 }, fortName, 4, "ranta")
+
+	-- Aerial photo also shows one other gun, possible 100mm,
+	-- which shouldn't be in use anymore, but marked as military
+	-- area on maps.
+	--
+	-- Aerial and tourist photos  show older gun turrets all around
+	-- the island.
+
+	-- Photo from 2021 shows PRA3000 radar
+	ScenEdit_UpdateUnit({
+		guid = fort.guid,
+		mode = "remove_sensor",
+		dbid = sensorId.radar_fika,
+	})
+	ScenEdit_UpdateUnit({
+		guid = fort.guid,
+		mode = "add_sensor",
+		dbid = sensorId.radar_pra3000,
+		arc_detect = { "360" },
+		arc_track = { "360" },
+	})
 end
 
 function coastalFort_miessaari()
 	local fortName = "Miessaari " .. fortSuffix
+
+	-- Aerial photos and photos taken by others shows
+	-- four 130/53 TK guns.
+	local fort = addFort_130mm53calTK({ latitude = 60.132571893, longitude = 24.785944577 }, fortName, 4, "ranta")
+
+	-- I can't see any radars on Miessaari, so it can be possible
+	-- that radar in the nearby Isosaari are used.
 end
 
 --- Adds Mäkiluoto Coastal Fort
@@ -158,7 +192,7 @@ end
 
 -- Adds Ronnskär Coastal Fort
 function coastalFort_ronnskar()
-	local fortName = "Rönnskär" .. fortSuffix
+	local fortName = "Rönnskär " .. fortSuffix
 
 	-- Aerial photos shows two 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 59.934308608, longitude = 24.390601055 }, fortName, 2, "ranta")
@@ -218,6 +252,10 @@ end
 addSide(side)
 
 -- Add forts
+coastalFort_gylto()
+coastalFort_isosaari()
+coastalFort_miessaari()
+coastalFort_makiluoto()
 coastalFort_rankki()
 coastalFort_russaro()
 coastalFort_ronnskar()
@@ -225,7 +263,3 @@ coastalFort_uto()
 
 -- Unfinished
 -- coastalFort_oro()
--- coastalFort_gylto()
--- coastalFort_isosaari()
--- coastalFort_miessaari()
--- coastalFort_makiluoto()
