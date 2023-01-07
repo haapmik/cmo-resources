@@ -96,13 +96,6 @@ function coastalFort_isosaari()
 	-- Aerial photos shows four 130/53 TK guns.
 	local fort = addFort_130mm53calTK({ latitude = 60.101053506, longitude = 25.054301100 }, fortName, 4, "ranta")
 
-	-- Aerial photo also shows one other gun, possible 100mm,
-	-- which shouldn't be in use anymore, but marked as military
-	-- area on maps.
-	--
-	-- Aerial and tourist photos  show older gun turrets all around
-	-- the island.
-
 	-- Photo from 2021 shows PRA3000 radar
 	ScenEdit_UpdateUnit({
 		guid = fort.guid,
@@ -125,18 +118,12 @@ function coastalFort_miessaari()
 	-- four 130/53 TK guns.
 	local fort = addFort_130mm53calTK({ latitude = 60.132571893, longitude = 24.785944577 }, fortName, 4, "ranta")
 
-	-- I can't see any radars on Miessaari, so it can be possible
-	-- that radar in the nearby Isosaari are used.
+	-- I can't find any information about radars on Miessaari.
 end
 
 --- Adds Mäkiluoto Coastal Fort
 function coastalFort_makiluoto()
 	local fortName = "Makiluoto " .. fortSuffix
-
-	-- Soviets blew up Mäkiluoto Coastal Fort before
-	-- they left from there in the 1950's. You can clearly
-	-- see these old destroyed gun placements from aerial
-	-- photos.
 
 	-- Aerial photos shows three possible 130/53 TK guns.
 	local fort = addFort_130mm53calTK({ latitude = 59.917027061, longitude = 24.347881879 }, fortName, 3, "ranta")
@@ -148,9 +135,6 @@ function coastalFort_rankki()
 
 	-- Aerial photos shows three possible 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 60.371789830, longitude = 26.959687004 }, fortName, 3, "ranta")
-
-	-- An old 152mm/50 T gun placement can be seen from previously
-	-- mentioned aerial photos.
 
 	-- Tourist photos shows 18045X radar
 	ScenEdit_UpdateUnit({
@@ -174,12 +158,6 @@ function coastalFort_russaro()
 	-- Aerial photos shows three possible 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 59.772922230, longitude = 22.945779695 }, fortName, 3, "ranta")
 
-	-- Aerial photos shows two old 234mm/50 model BS guns
-	-- which currently serves as museum guns and are probably disabled.
-	--
-	-- Tourist photos shows old 100mm gun near to Russarö lighthouse,
-	-- which is no longer in use.
-	--
 	-- Tourist photos and videos from 2016 and before shows Fika radar,
 	-- so we will not change the default facility setup.
 end
@@ -191,8 +169,7 @@ function coastalFort_ronnskar()
 	-- Aerial photos shows two 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 59.934308608, longitude = 24.390601055 }, fortName, 2, "ranta")
 
-	-- Aerial photos shows multiple underground storages
-	-- and possible old gun placement (152mm/50 T?).
+	-- Aerial photos shows multiple underground storages.
 
 	-- Rönnskär lighthouse has PRA3000 on top of it.
 	ScenEdit_UpdateUnit({
@@ -217,9 +194,6 @@ function coastalFort_uto()
 	-- shows four 130mm/53 TK guns, two at east and two at west of Utö.
 	local fort = addFort_130mm53calTK({ latitude = 59.780974602, longitude = 21.369452746 }, fortName, 4, "ranta")
 
-	-- Aerial photos also shows four old 152mm/50 T guns at west of Utö,
-	-- from which three has been dismantled and one disabled.
-	--
 	-- There is one unknown gun west of Utö. Some Coastal forts includes
 	-- empty gun hulls for deceoption so this could be one of those?
 
@@ -243,8 +217,6 @@ function coastalFort_oro()
 
 	-- Aerial photos and tourist photos shows three 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 59.806830586, longitude = 22.333661402 }, fortName, 3, "ranta")
-
-	-- Aerial photos also shows four old 152mm/50 T guns at southwest of Örö,
 end
 
 -- Create side if not available

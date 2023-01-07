@@ -21,8 +21,8 @@
 local side = "Finland"
 local zoneName = "Åland DMZ"
 
--- East side
 local aaland_dmz_refs = {
+	-- East side
 	{ latitude = 60.683333333, longitude = 21.000000000 },
 	{ latitude = 60.585833333, longitude = 21.102500000 },
 	{ latitude = 60.550833333, longitude = 21.133333333 },
@@ -35,6 +35,7 @@ local aaland_dmz_refs = {
 	{ latitude = 59.883333333, longitude = 21.333333333 },
 	{ latitude = 59.801388889, longitude = 21.333333333 },
 	{ latitude = 59.450000000, longitude = 20.767500000 },
+	-- West side
 	{ latitude = 59.450000000, longitude = 20.151944444 },
 	{ latitude = 59.785555556, longitude = 19.666666667 },
 	{ latitude = 60.185555556, longitude = 19.084722222 },
@@ -42,12 +43,12 @@ local aaland_dmz_refs = {
 	{ latitude = 60.683333333, longitude = 19.234444444 },
 }
 
-for _, value in pairs(aaland_dmz_refs) do
+for _, ref in pairs(aaland_dmz_refs) do
 	ScenEdit_AddReferencePoint({
 		side = side,
 		name = zoneName,
-		lat = value.latitude,
-		lon = value.longitude,
+		lat = ref.latitude,
+		lon = ref.longitude,
 		highlighted = true,
 	})
 end
