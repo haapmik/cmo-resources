@@ -5,7 +5,7 @@
 -- are not alone responsible for Finnish coastal defence, but
 -- only a part of it.
 --
--- CMO doesn't model Finnish arhcipedago correctly and thus
+-- CMO doesn't model Finnish archipelago correctly and thus
 -- we cannot spread coastal guns as a single units around
 -- each island. This script uses a bit simpler method and
 -- places each battery as a single facility.
@@ -134,7 +134,7 @@ function coastalFort_makiluoto()
 	local fortName = "Makiluoto " .. fortSuffix
 
 	-- Soviets blew up Mäkiluoto Coastal Fort before
-	-- they left there in the 1950's. You can clearly
+	-- they left from there in the 1950's. You can clearly
 	-- see these old destroyed gun placements from aerial
 	-- photos.
 
@@ -145,12 +145,6 @@ end
 --- Adds Rankki Coastal Fort
 function coastalFort_rankki()
 	local fortName = "Rankki " .. fortSuffix
-
-	-- Finnish Navy left from Rankki by the end of 2013,
-	-- but it is not known whether guns are still kept in
-	-- operational condition. Atleast parts of the island
-	-- are still marked as military area in maps and photos
-	-- shows fences around these guns.
 
 	-- Aerial photos shows three possible 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 60.371789830, longitude = 26.959687004 }, fortName, 3, "ranta")
@@ -180,7 +174,7 @@ function coastalFort_russaro()
 	-- Aerial photos shows three possible 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 59.772922230, longitude = 22.945779695 }, fortName, 3, "ranta")
 
-	-- Aerial photos also shows two old 234mm/50 model BS guns
+	-- Aerial photos shows two old 234mm/50 model BS guns
 	-- which currently serves as museum guns and are probably disabled.
 	--
 	-- Tourist photos shows old 100mm gun near to Russarö lighthouse,
@@ -197,7 +191,7 @@ function coastalFort_ronnskar()
 	-- Aerial photos shows two 130mm/53 TK guns
 	local fort = addFort_130mm53calTK({ latitude = 59.934308608, longitude = 24.390601055 }, fortName, 2, "ranta")
 
-	-- Aerial photos also shows multiple underground storages
+	-- Aerial photos shows multiple underground storages
 	-- and possible old gun placement (152mm/50 T?).
 
 	-- Rönnskär lighthouse has PRA3000 on top of it.
@@ -217,7 +211,7 @@ end
 
 -- Adds Utö Coastal Fort
 function coastalFort_uto()
-	local fortName = "Utö" .. fortSuffix
+	local fortName = "Utö " .. fortSuffix
 
 	-- Sources, Aerial photos, and photos taken by tourists in 2021
 	-- shows four 130mm/53 TK guns, two at east and two at west of Utö.
@@ -245,7 +239,12 @@ function coastalFort_uto()
 end
 
 function coastalFort_oro()
-	local fortName = "Örö" .. fortSuffix
+	local fortName = "Örö " .. fortSuffix
+
+	-- Aerial photos shows three possible 130mm/53 TK guns
+	local fort = addFort_130mm53calTK({ latitude = 59.806830586, longitude = 22.333661402 }, fortName, 3, "ranta")
+
+	-- Aerial photos also shows four old 152mm/50 T guns at southwest of Örö,
 end
 
 -- Create side if not available
@@ -260,6 +259,4 @@ coastalFort_rankki()
 coastalFort_russaro()
 coastalFort_ronnskar()
 coastalFort_uto()
-
--- Unfinished
--- coastalFort_oro()
+coastalFort_oro()
