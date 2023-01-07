@@ -95,8 +95,17 @@ function coastalFort_miessaari()
 	local fortName = "Miessaari " .. fortSuffix
 end
 
+--- Adds Mäkiluoto Coastal Fort
 function coastalFort_makiluoto()
 	local fortName = "Makiluoto " .. fortSuffix
+
+	-- Soviets blew up Mäkiluoto Coastal Fort before
+	-- they left there in the 1950's. You can clearly
+	-- see these old destroyed gun placements from aerial
+	-- photos.
+
+	-- Aerial photos shows three possible 130/53 TK guns.
+	local fort = addFort_130mm53calTK({ latitude = 59.917027061, longitude = 24.347881879 }, fortName, 3, "ranta")
 end
 
 --- Adds Rankki Coastal Fort
@@ -181,11 +190,12 @@ function coastalFort_uto()
 	local fort = addFort_130mm53calTK({ latitude = 59.780974602, longitude = 21.369452746 }, fortName, 4, "ranta")
 
 	-- Aerial photos also shows four old 152mm/50 T guns at west of Utö,
-	-- from which three has been dismantled and one disabled at west of Utö.
+	-- from which three has been dismantled and one disabled.
+	--
 	-- There is one unknown gun west of Utö. Some Coastal forts includes
-	-- empty gun hulls used for deceoption so this could be one of those?
+	-- empty gun hulls for deceoption so this could be one of those?
 
-	-- Previous mentioned photos shows PRA3000 radar
+	-- Tourist photo from 2021 shows PRA3000 radar
 	ScenEdit_UpdateUnit({
 		guid = fort.guid,
 		mode = "remove_sensor",
