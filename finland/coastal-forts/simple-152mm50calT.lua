@@ -104,31 +104,70 @@ function addFort_152mm50calT(fortLoc, fortSide, fortName, fortSize, fortGroup)
 end
 
 function coastalFort_alskar()
+	-- These guns doesn't have the traditional protective cupola shielding
+	-- them and one is hiding inside a house.
+	local fortGuns = 3
 	local fortName = "Alskär " .. fortSuffix
+	local fortSide = side
+	local fort =
+		addFort_152mm50calT({ latitude = 59.989124282, longitude = 21.242755232 }, fortSide, fortName, fortGuns)
 end
 
 function coastalFort_gylto()
+	-- Sources says there should be 4 guns but I can only find three.
+	-- There are couple of other possible guns but the aerial photos
+	-- are not good enough.
+	local fortGuns = 4
 	local fortName = "Gyltö " .. fortSuffix
+	local fortSide = side
+	local fort =
+		addFort_152mm50calT({ latitude = 60.111405404, longitude = 21.484861289 }, fortSide, fortName, fortGuns)
 end
 
 function coastalFort_hastobuso()
+	-- Aerial photos shows four guns.
+	local fortGuns = 4
 	local fortName = "Hästö-Busö " .. fortSuffix
+	local fortSide = side
+	local fort =
+		addFort_152mm50calT({ latitude = 59.837908429, longitude = 23.329650535 }, fortSide, fortName, fortGuns)
 end
 
 function coastalFort_isosaari()
+	-- Map for visitors clearly marks these old guns
+	-- so you can go and explore them.
+	local fortGuns = 4
 	local fortName = "Isosaari " .. fortSuffix
+	local fortSide = side
+	local fort =
+		addFort_152mm50calT({ latitude = 60.100158102, longitude = 25.052993395 }, fortSide, fortName, fortGuns)
 end
 
 function coastalFort_jungfruskar()
+	-- According to the Coastal Artillery Museum,
+	-- Jungfruskär has three guns without the armoured cupola.
+	local fortGuns = 4
 	local fortName = "Jungfruskär " .. fortSuffix
+	local fortSide = side
+	local fort =
+		addFort_152mm50calT({ latitude = 60.138499873, longitude = 21.077742966 }, fortSide, fortName, fortGuns)
 end
 
 function coastalFort_katanpaa()
+	-- Aerial photos show two guns
+	local fortGuns = 2
 	local fortName = "Katanpää " .. fortSuffix
+	local fortSide = side
+	local fort =
+		addFort_152mm50calT({ latitude = 60.614191530, longitude = 21.168813638 }, fortSide, fortName, fortGuns)
 end
 
 function coastalFort_kirkonmaa()
+	-- Aerial photos shows four guns
+	local fortGuns = 2
 	local fortName = "Kirkonmaa " .. fortSuffix
+	local fortSide = side
+	addFort_152mm50calT({ latitude = 60.375319449, longitude = 27.049473942 }, fortSide, fortName, fortGuns)
 end
 
 function coastalFort_kuuskajaskari()
@@ -245,16 +284,13 @@ function coastalFort_oro()
 		addFort_152mm50calT({ latitude = 59.803426015, longitude = 22.314327743 }, fortSide, fortName, fortGuns)
 end
 
--- Unfinished
---coastalFort_alskar()
---coastalFort_gylto()
---coastalFort_hastobuso()
---coastalFort_isosaari()
---coastalFort_jungfruskar()
---coastalFort_katanpaa()
---coastalFort_kirkonmaa()
-
--- Finished
+coastalFort_katanpaa()
+coastalFort_kirkonmaa()
+coastalFort_alskar()
+coastalFort_gylto()
+coastalFort_hastobuso()
+coastalFort_isosaari()
+coastalFort_jungfruskar()
 coastalFort_kuuskajaskari()
 coastalFort_kyto()
 coastalFort_lehtinen()
